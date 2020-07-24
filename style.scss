@@ -150,11 +150,12 @@ $md4:590.98;
   align-items: center;
   height: 20px;
   width: 400px;
-  border: 1px solid black;
+  border: 1px solid rgb(140,140,140);
   border-radius: 3px;
   margin: 0 0 0 40px;
   padding: 0 5px;
   background-color: rgb(126, 56,238);
+  color: rgb(214, 214, 214);
   & img { 
     height: 15px;
     width: 15px;
@@ -162,8 +163,8 @@ $md4:590.98;
   &:hover{
       cursor: text;
       transition: all 0.3s;
-      border: 1px solid white;
-      color: rgb(214, 214, 214);
+      border: 1px solid rgb(200,200,200);
+      color: rgb(240,240,240);
   }
 
   @media (max-width: $md2 + px) { 
@@ -231,7 +232,10 @@ $md4:590.98;
       margin: 0px 0px 2px 5px;
     }
   }
-  & p::before{
+
+  & p{
+    color:rgb(103,103,103);
+  &::before{
     content: '';
     display: inline-block;
     background: url(../img/icons/night.png) 100%;
@@ -240,7 +244,7 @@ $md4:590.98;
     height: 15px;
     margin: 0px 2px 0px 0px;
   }
-  & p::after{
+  &::after{
     content: '';
     display: block;
     background: black url(../img/icons/edit.png) no-repeat  center;
@@ -254,13 +258,13 @@ $md4:590.98;
     top:14px;
     right: 10px;
   }
+ }
 }
 
 
 .bottom-right {
   flex-basis: 100%;
   position: relative;
-
   @media (max-width: $md1 + px) {
     width: 100%;
   }
@@ -279,8 +283,9 @@ $md4:590.98;
     width: 13px;
     height: 13px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 3px;
+    transform: translate(0,-50%);
     margin: 0px 0px 0px 50px;
     }
   }
@@ -318,8 +323,8 @@ $md4:590.98;
     }
   }
 
-  & .bottom-nav__add { 
-    color: rgb(210, 210,210);
+  & .bottom-nav__add, .bottom-nav__people, .bottom-nav__pinned { 
+    color: rgb(103, 103,103);
   }
 
   & .bottom-nav__about { 
@@ -694,11 +699,11 @@ $md4:590.98;
      border-radius: 3px;
    }
    
-   @media (max-height: 900px) {
+   @media (max-height: 1020px) {
     overflow: auto;
     margin: 0px 0px 100px 0px;
   }
-  @media (max-width: 434px) {
+  @media (max-width: 727px) {
     overflow: auto;
     margin: 0px 0px 100px 0px;
   }
@@ -730,7 +735,14 @@ $md4:590.98;
     margin: 0px 0px 4px 5px;
   }
 
+  @media (max-width: $md4 + px) {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%,0);
+  }
+
 }
+
 
 .message-alex1, .message-karina, .message-alex2  {
   display: inline-block;
@@ -761,6 +773,11 @@ $md4:590.98;
 }
 .main-column-right__name, .main-column-right__oclock  {
   display: inline-block;
+}
+
+.main-column-right__oclock { 
+  color: rgb(103,103,103);
+  font-size: 12px;
 }
 
 .main-column-right__message {
@@ -849,7 +866,7 @@ $md4:590.98;
 
 .message-info__replies {
   margin: 0px 5px 0px 0px;
-  color:rgb(112, 160, 198);
+  color:rgb(18, 100, 163);
 }
 
 
