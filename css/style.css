@@ -815,21 +815,20 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
 }
 
-@media (max-height: 1020px) and (max-width: 767.98px) {
-  .main-column-right {
-    overflow: auto;
+.main-column-right .column-right-chat {
+  height: calc(100% - 111px);
+  overflow: auto;
+}
+
+@media (max-width: 767.98px) {
+  .main-column-right .column-right-chat {
+    height: calc(100% - 133px);
   }
 }
 
-@media (max-height: 870px) {
-  .main-column-right {
-    overflow: auto;
-  }
-}
-
-@media (max-width: 727px) {
-  .main-column-right {
-    overflow: auto;
+@media (max-width: 590.98px) {
+  .main-column-right .column-right-chat {
+    height: calc(100% - 156px);
   }
 }
 

@@ -739,16 +739,18 @@ $md4:590.98;
    & img { 
      border-radius: 3px;
    }
-   
-   @media (max-height: 1020px )  and (max-width: $md3 + px) {
-    overflow: auto;
-  }
 
-  @media (max-height: 870px ){
+  & .column-right-chat { 
+    height: calc(100% - 111px);
     overflow: auto;
-  }
-  @media (max-width: 727px) {
-    overflow: auto;
+
+    @media (max-width: $md3 + px) {
+      height: calc(100% - 133px );
+    }
+
+    @media (max-width: $md4 + px) {
+      height: calc(100% - 156px );
+    }
   }
 }
 
